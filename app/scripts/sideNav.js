@@ -6,5 +6,5 @@ angular.module('phoneBookApp')
 		templateUrl: 'views/side-nav.html',
 		controller: 'sideNavController',
 		controllerAs: 'sideNavCtrl'
-	})
+	});
 })();

@@ -1,7 +1,37 @@
-<section layout="column" flex="20">
-	<md-sidenav>
-		<md-content>
-			<p>Side nav stuff</p>
-		</md-content>
-	</md-sidenav>
+<section layout="row" >
+	<md-sidenav
+        class="md-sidenav-left"
+        md-component-id="left"
+        md-is-locked-open="true">
+
+
+
+      <md-content layout-padding  flex="100">
+
+
+
+
+
+      <md-card ng-repeat="contact in sideNavCtrl.contacts">
+	    <md-card-content>
+			<md-card-title>
+	          <md-card-title-text>
+	            <span class="md-headline">{{contact.firstName}} {{contact.lastName}}</span>
+	            <span class="md-subhead">{{contact.phoneNumber}}</span>
+	          </md-card-title-text>
+	          <md-card-title-media>
+	            <div class="md-media-sm card-media"></div>
+	          </md-card-title-media>
+	        </md-card-title>
+	    </md-card-content>
+	 </md-card>
+
+
+
+
+
+
+      </md-content>
+
+    </md-sidenav>
 </section>
