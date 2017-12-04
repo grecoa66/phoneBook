@@ -6,7 +6,11 @@
 		var vm = this;
 		var scope = $rootScope;
 		vm.contactFact = contactFactory;
-		vm.contacts = vm.contactFact.getContacts();
+		vm.contacts = [];
+		// call to get the contacts from the factory
+		vm.contactFact.getContacts().then(function(contacts){
+		  vm.contacts = contacts;
+    });
 
 		//attach function to ctrl
 		vm.showDetail = showDetail;
@@ -19,22 +23,22 @@
 			scope.$broadcast('contactSelected', contact);
 			console.log("in side nav: ", contact);
 		}
-		
+
 	};
 
 
 	/**
-	*	Component configration 
+	*	Component configration
 	*/
-	
-	// Inject any dependencies 
+
+	// Inject any dependencies
 	sideNavController.$inject = ['$scope', '$rootScope', 'contactFactory'];
 
 	// Delcare the controller
 	angular.module('phoneBookApp')
 	.controller('sideNavController', sideNavController);
 
-	
+
 	// Include this component into the app
 	angular.module('phoneBookApp')
 	.component('sideNav',{
@@ -42,5 +46,5 @@
 		controller: 'sideNavController',
 		controllerAs: 'sideNavCtrl'
 	});
-	
+
 })();

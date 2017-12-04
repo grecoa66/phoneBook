@@ -6,15 +6,10 @@
 		var vm = this;
 		vm.contact;
 
-		//attach functions to ctrl
-		vm.setModel = setModel;
+		/* Functions */
 
-		/**
-		*	Functions
-		*/
-
-		function setModel(){
-
+		function setContact(contact){
+      vm.contact = contact;
 		}
 
 		//Listen to for a contact being selected
@@ -25,10 +20,7 @@
 
 	}
 
-	/**
-	*	component configuration
-	*/
-
+	/* component configuration */
 	contactDetailController.$inject = ['$scope', '$rootScope', 'contactFactory'];
 
 	// Declare the controller
