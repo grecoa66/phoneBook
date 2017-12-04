@@ -1,0 +1,34 @@
+{
+  "contacts" : {
+    "1": {
+      "id": "0001",
+      "firstName": "Steve",
+      "lastName": "Anderson",
+      "phoneNumber": "9082686574"
+    },
+    "2": {
+      "id": "0002",
+      "firstName": "Andre",
+      "lastName": "Roberts",
+      "phoneNumber": "9188091885"
+    },
+    "3": {
+      "id": "0003",
+      "firstName": "Shamika",
+      "lastName": "Cranstin",
+      "phoneNumber": "9732479330"
+    },
+    "4": {
+      "id": "0004",
+      "firstName": "Pam",
+      "lastName": "Halpert",
+      "phoneNumber": "9732471113"
+    },
+    "5": {
+      "id": "0005",
+      "firstName": "Jim",
+      "lastName": "Halpert",
+      "phoneNumber": "7326818847"
+    }
+  }
+}
