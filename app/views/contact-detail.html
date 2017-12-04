@@ -1,16 +1,23 @@
-<div flex="100" layout-padding >
+<div layout-padding ng-show="ctrl.displayMode" ng-hide="ctrl.editMode || !ctrl.contact" flex>
 
-	<md-toolbar class="md-hue-2 " flex>
+  <md-toolbar class="md-hue-2 " layout="row" flex>
 
-		<h1 class="md-toolbar-tools">{{contactDetailCtrl.contact.firstName + " " + contactDetailCtrl.contact.lastName}}</h1>
+    <h1 class="md-toolbar-tools" flex>{{ctrl.contact.firstName + " " + ctrl.contact.lastName}}</h1>
 
-		<span flex> </span>
 
-	</md-toolbar>
 
-	<md-content flex>
-    <h4>{{contactDetailCtrl.contact.phoneNumber}}</h4>
-    <h4>{{contactDetailCtrl.contact.birthday}}</h4>
-    <h4>{{contactDetailCtrl.contact.address}}</h4>
-	</md-content>
+    <button ng-click="ctrl.editContact()" flex class="warning-text">Edit</button>
+
+  </md-toolbar>
+
+  <md-content flex>
+    <h4>{{ctrl.contact.phoneNumber}}</h4>
+    <h4>{{ctrl.contact.birthday}}</h4>
+    <h4>{{ctrl.contact.address}}</h4>
+  </md-content>
+</div>
+
+<div layout-padding ng-show="ctrl.editMode" ng-hide="ctrl.displayMode">
+  <p>Edit Mode</p>
+  <button ng-click="ctrl.editContact()"></button>
 </div>

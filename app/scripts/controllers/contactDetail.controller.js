@@ -5,12 +5,22 @@
 		//local variables
 		var vm = this;
 		vm.contact;
+		vm.displayMode = true;
+		vm.editMode = false;
 
 		/* Functions */
+		vm.setContact = setContact;
+		vm.editContact = editContact;
 
 		function setContact(contact){
       vm.contact = contact;
 		}
+
+		function editContact(){
+		  console.log("Edit Contact works");
+		  vm.displayMode = !vm.displayMode;
+		  vm.editMode = !vm.editMode;
+    }
 
 		//Listen to for a contact being selected
 		$rootScope.$on('contactSelected', function(event, data){
@@ -32,7 +42,7 @@
 		.component('contactDetail',{
 			templateUrl: 'views/contact-detail.html',
 			controller: 'contactDetailController',
-			controllerAs: 'contactDetailCtrl'
+			controllerAs: 'ctrl'
 	});
 
 })();

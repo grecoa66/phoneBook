@@ -1,21 +1,18 @@
 (function(){
 'use strict';
 
-	
 
-	function MainController($scope, contactFactory){
+
+	function MainController($scope){
 		//local variables
 		var vm = this;
-		vm.name = "Steve";
-		vm.contacts = contactFactory.getContacts();
-
 
 	};
 
 
 	//End of controller function
 
-	MainController.$inject = ['$scope', 'contactFactory'];
+	MainController.$inject = ['$scope'];
 
 	angular.module('phoneBookApp')
 		.controller('MainController', MainController);
