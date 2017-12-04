@@ -1,11 +1,10 @@
 (function(){
 'use strict';
 
-
-
 	function contactFactory(){
+		//
 		var vm = this;
-		
+		vm.contactDetail = {};
 		vm.contacts = {
 		    "1": {
 		      "firstName": "Steve",
@@ -35,7 +34,7 @@
 		};
 
 		
-		//////////////////////////////////////////////////
+		//
 
 
 
@@ -43,16 +42,22 @@
 			return vm.contacts;
 		}
 
+		function castContact(contact){
+			
+		}
+
 
 
 		//////////////////////////////////////////////////
 
 		var methods = {
-			getContacts : getContacts
+			getContacts : getContacts,
+			castContact: castContact
 		};
 
 		return methods;
 	}
+	//contactFactory.$inject = ['$scope'];
 
 	angular.module('phoneBookApp')
 	.factory('contactFactory', contactFactory);

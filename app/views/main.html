@@ -1,14 +1,19 @@
-<md-content>
-  
-  <md-toolbar class="md-primary top-toolbar">
-    <div>
-      <h1>Phone Book</h1>
-    </div>
-  </md-toolbar>
+<div layout="column">
 
-</md-content>
-<side-nav></side-nav>
+	<md-toolbar class="md-primary top-toolbar">
+	    <div>
+	      <h1>Phone Book</h1>
+	    </div>
+	</md-toolbar>
 
 
 
+	<md-content layout=flex layout-padding>
 
+		<side-nav></side-nav>
+
+		<contact-detail></contact-detail>
+
+	</md-content>
+	
+</div>
