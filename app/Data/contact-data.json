@@ -5,40 +5,70 @@
       "firstName": "Steve",
       "lastName": "Anderson",
       "phoneNumber": "9082686574",
-      "address" : "16 Kings way, Culver City, CO 70485",
-      "birthday" : "12/24/89"
+      "address" : {
+        "street": "16 Kings way",
+        "city": "Culver City",
+        "state": "CO",
+        "zip": "70485"
+      },
+      "birthday" : "12/24/89",
+      "image" : "../images/rsz_steve_anderson.jpg"
     },
     "2": {
       "id": "0002",
       "firstName": "Andre",
       "lastName": "Roberts",
       "phoneNumber": "9188091885",
-      "address" : "1009 Benson Road, Arlington, VA 18995",
-      "birthday" : "4/20/89"
+      "address" : {
+        "street" : "1009 Benson Road",
+        "city" : "Arlington",
+        "state" : "VA",
+        "zip" : "18995"
+      },
+      "birthday" : "4/20/89",
+      "image" : "../images/rsz_1andre_robertson.jpg"
     },
     "3": {
       "id": "0003",
       "firstName": "Shamika",
       "lastName": "Cranstin",
       "phoneNumber": "9732479330",
-      "address" : "329 Fisk Ave, Manasquan, NJ 87394",
-      "birthday" : "1/13/90"
+      "address" : {
+        "street" : "329 Fisk Ave",
+        "city" : "Manasquan",
+        "state" : "NJ",
+        "zip" : "87394"
+      },
+      "birthday" : "1/13/90",
+      "image" : "../images/rsz_shamika_cranstin.jpg"
     },
     "4": {
       "id": "0004",
       "firstName": "Pam",
       "lastName": "Halpert",
       "phoneNumber": "9732471113",
-      "address" : "4 Jenny's Lane, Salt Lake City, UT 06676",
-      "birthday" : "11/14/89"
+      "address" : {
+        "street" : "4 Jenny's Lane",
+        "city" : "Salt Lake City",
+        "state": "UT",
+        "zip" : "06676"
+      },
+      "birthday" : "11/14/89",
+      "image" : "../images/rsz_pam_halpert.jpg"
     },
     "5": {
       "id": "0005",
       "firstName": "Jim",
       "lastName": "Halpert",
       "phoneNumber": "7326818847",
-      "address" : "22 Jump Street, Oakland, CA 23332",
-      "birthday" : "9/12/92"
+      "address" : {
+        "street" : "22 Jump Street",
+        "city" : "Oakland",
+        "state": "CA",
+        "zip" : "23332"
+      },
+      "birthday" : "9/12/92",
+      "image" : "../images/rsz_jim_halpert.jpg"
     }
   }
 }

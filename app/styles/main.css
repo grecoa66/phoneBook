@@ -65,6 +65,11 @@ body {
   text-align: center;
 }
 
+/* padding for card info */
+.card-info {
+  padding: 0 0 10px 10px;
+}
+
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
   .container {

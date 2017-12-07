@@ -29,8 +29,12 @@ angular
       .otherwise({
         redirectTo: '/'
       });
-  $mdThemingProvider.theme('default')
-    .primaryPalette('blue')
-    .accentPalette('deep-orange');
-      });
+    $mdThemingProvider.theme('default')
+      .primaryPalette('light-blue')
+      .accentPalette('green');
+    $mdThemingProvider.theme('deep-purple')
+      .primaryPalette('deep-purple');
+  });
+
+
 })();

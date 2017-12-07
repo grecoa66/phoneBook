@@ -1,20 +1,33 @@
 <div layout-padding ng-show="ctrl.displayMode" ng-hide="ctrl.editMode || !ctrl.contact" flex>
 
-  <md-toolbar class="md-hue-2 " layout="row" flex>
+  <md-card layout="row" flex-auto md-theme="deep-purple" md-theme-watch >
+    <md-card-title>
+      <md-card-title-text>
+        <span class="md-headline">{{ctrl.contact.firstName + " " + ctrl.contact.lastName}}</span>
+        <br/>
+        <label>Phone:</label>
+        <span class="card-info">{{ctrl.contact.phoneNumber}}</span>
 
-    <h1 class="md-toolbar-tools" flex>{{ctrl.contact.firstName + " " + ctrl.contact.lastName}}</h1>
+        <label> Address: </label>
+        <span class="card-info">
+          {{ctrl.contact.address.street}},
+          <br/>
+          {{ctrl.contact.address.city}}, {{ctrl.contact.address.state}} {{ctrl.contact.address.zip}}
+        </span>
+
+        <label>Birthday:</label>
+        <span class="card-info">{{ctrl.contact.birthday}}</span>
+
+      </md-card-title-text>
+
+      <md-card-title-media style="padding:10px;">
+        <img class="md-media-lg card-media " src="{{ctrl.contact.image}}" style=" border-radius:20px">
+      </md-card-title-media>
+
+    </md-card-title>
+  </md-card>
 
 
-
-    <button ng-click="ctrl.editContact()" flex class="warning-text">Edit</button>
-
-  </md-toolbar>
-
-  <md-content flex>
-    <h4>{{ctrl.contact.phoneNumber}}</h4>
-    <h4>{{ctrl.contact.birthday}}</h4>
-    <h4>{{ctrl.contact.address}}</h4>
-  </md-content>
 </div>
 
 <div layout-padding ng-show="ctrl.editMode" ng-hide="ctrl.displayMode">
