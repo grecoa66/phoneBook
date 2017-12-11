@@ -9,7 +9,7 @@
 		vm.contacts = [];
 		// call to get the contacts from the factory
 		vm.contactFact.getContacts().then(function(contacts){
-		  vm.contacts = contacts;
+		  vm.contacts = contacts.data.contacts;
     });
 
 		//attach function to ctrl

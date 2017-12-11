@@ -14,14 +14,7 @@
      * @returns {Function}
      */
 		function getContacts(){
-		  var deferred = $q.defer();
-      $http.get("../../Data/contact-data.json").success(function(response){
-        // Save a local copy
-        vm.contacts = response.contacts;
-        // Return the list of contacts to the caller
-        deferred.resolve(response.contacts);
-      });
-			return deferred.promise;
+      return $http.get('../../Data/contact-data.json');
 		}
 
 
